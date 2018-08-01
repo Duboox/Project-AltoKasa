@@ -1,0 +1,195 @@
+.error-validate{
+	color: red;
+}
+
+.confirmed{
+	color: #39860a;
+}
+
+.user-avatar {
+    height: auto;
+    width: 50px;
+}
+
+.table-avatar{
+	height: auto;
+    width: 20px;
+}
+
+.no-confirmed{
+	color: #e20619;
+}
+
+.m-t-50{
+	margin-top: 50px;
+}
+
+.project-people img {
+    width: 35px;
+    height: 35px;
+}
+
+.img-circle-propierty {
+    border-radius: 5% !important;
+}
+
+.btn-propierty-d{
+    display: inline;
+}
+
+.input-propierty{
+    width: 85px;
+    text-align: center;
+}
+
+.input-propierty-text{
+    
+}
+
+.dropzone .dz-default.dz-message {
+    top: 80% !important;
+}
+
+b.a-active{
+    color: blue;
+}
+
+b.b-inactive{
+    color: red;
+}
+
+.inline-block{
+    display: inline-block !important;
+}
+
+div.var_null {
+    font-weight: bold;
+    color: red;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.color-0{
+
+}
+
+.color-1{
+    
+}
+
+.color-2{
+    
+}
+
+.color-3{
+    
+}
+
+.color-4{
+    
+}
+
+.color-5{
+    
+}
+
+.color-6{
+    
+}
+
+.color-7{
+    
+}
+
+.tt-color-0{
+
+}
+
+.tt-color-1{
+
+}
+
+.tt-color-2{
+
+}
+
+.btn-dc9808-cfff {
+    background-color: #dc9808 !important;
+    color: #fff;
+}
+
+.btn-dc9808-cfff.focus, .btn-dc9808-cfff:hover {
+    background-color: #dc9808ab !important;
+    color: #fff;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.img-home{
+    width: 100%;
+}
+
+.capitalize {
+    text-transform: capitalize;
+    display: flex;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+hr {
+    border-top: 1px solid #151515 !important;
+}
+
+.dedede {
+    background: #dedede;
+}
+
+/* #scroll {
+    height: 55vh;
+    overflow-y: scroll;
+} */
+
+.tag-name {
+    margin-left: 5px;
+}
+
+.c0606e0 {
+    color: #0606e0;
+}
+
+.ibox-title {
+    border-color: transparent !important;
+}
+
+.ibox-2 {
+    clear: both;
+    margin-bottom: 8px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.size-75 {
+    height: 75vh;
+}
+
+.mycontainer .chosen-choices {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.show-var-null {
+    color: blue !important;
+    font-weight: bold;
+    font-size: 15px;
+}
