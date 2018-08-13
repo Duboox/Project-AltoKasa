@@ -114,9 +114,9 @@ class PhotoController extends Controller
            $photo->update(['status' => $request->status, 'primary' => $request->primary]);
         }else{
             $img = Image::make($file->getRealPath());
-            $filename = str_random(20).'_'.md5($file->getClientOriginalName()); 
+            $filename = str_random(20).'_'.md5($file->getClientOriginalName().'.jpg'); 
             Storage::disk('propierty')->delete($photo->img);
-            Storage::disk('propierty')->put($filename, $img->encode());
+            Storage::disk('propierty')->put($filename, $img->encode('jpg', 75));
             $photo->update([
                 'img' => $filename, 
                 'status' => $request->status, 

@@ -46,8 +46,8 @@ class GalleryController extends Controller
         try {
             foreach($files as $file){
                 $img = Image::make($file->getRealPath())->resize(1920, 665);
-                $filename = str_random(20).'_'.md5($file->getClientOriginalName()); 
-                Storage::disk('gallery')->put($filename, $img->encode());
+                $filename = str_random(20).'_'.md5($file->getClientOriginalName().'.jpg'); 
+                Storage::disk('gallery')->put($filename, $img->encode('jpg', 75));
                 Gallery::create([
                     'id_user' => id_user(), 
                     'title' => $request->title, 
