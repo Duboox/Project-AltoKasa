@@ -68,6 +68,13 @@
         font-size: 1.5em;
         left: 7%;
     }
+    .slide_container{
+        height: 820px;
+    }
+    .image_slide{
+        object-fit: cover;
+     max-height: 820px;
+    }
 </style>
 
 <div id="home">
@@ -87,19 +94,36 @@
 
         <div class="buttons_slide_container">
         <button class="tm-btn buttons_slide_centerd" onclick="window.location.href='{{ route("bienes") }}' {{ setActiveWeb('bienes') }}">BIENES RAICES</button>
-        <button class="tm-btn buttons_slide_centerd" onclick="window.location.href='{{ route("inversiones") }}' {{ setActiveWeb('inversiones') }}">INVERSIONES</button>
-        <button class="tm-btn buttons_slide_centerd" onclick="window.location.href='{{ route("constructora") }}' {{ setActiveWeb('constructora') }}">CONSTRUCTORA</button>
+        <!-- <button class="tm-btn buttons_slide_centerd" onclick="window.location.href='{{ route("inversiones") }}' {{ setActiveWeb('inversiones') }}">INVERSIONES</button>
+        <button class="tm-btn buttons_slide_centerd" onclick="window.location.href='{{ route("constructora") }}' {{ setActiveWeb('constructora') }}">CONSTRUCTORA</button> -->
+        <button class="tm-btn buttons_slide_centerd">INVERSIONES</button>
+        <button class="tm-btn buttons_slide_centerd">CONSTRUCTORA</button>
         </div>
     <div class="flexslider">
 			  <ul class="slides">
-			    <li>
-			      <img src={{url_img_web ('alto_casa.png','static') }} alt="image_about_us" />
+			    <li class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('campus.jpg','static') }} alt="image_about_us" />
 			    </li>
-			    <li>
-			      <img src={{url_img_web ('slider_1.png','static') }}  alt="image_view" /> 		      
+			    <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_1.jpg','static') }}  alt="image_view" /> 		      
 			    </li>
-			    <li>
-			      <img src={{url_img_web ('slider_2.png','static') }}  alt="image_values" />
+			    <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_2.jpg','static') }}  alt="image_values" />
+			    </li>
+                <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_3.jpg','static') }}  alt="image_values" />
+			    </li>
+                <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_4.jpg','static') }}  alt="image_values" />
+			    </li>
+                <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_5.jpg','static') }}  alt="image_values" />
+			    </li>
+                <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_6.jpg','static') }}  alt="image_values" />
+			    </li>
+                <li  class="slide_container">
+			      <img class="image_slide" src={{url_img_web ('slider_7.jpg','static') }}  alt="image_values" />
 			    </li>
 			  </ul>
 			</div>
