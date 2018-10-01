@@ -30,16 +30,13 @@
             <div class="ibox-content">
                @include('dashboard.modules.propierty.partials.form')
             </div>
-            {{ Form::close() }}
          </div>
+         {{ Form::close() }}
       </div>
    </div>
 </div>
 <script type="text/javascript">
-function saveForm() {
-    console.log('test');
-    document.getElementById('#propierty-form').submit();
-};
+
 </script>
 
 @include('dashboard.modules.propierty.partials.modal.search')

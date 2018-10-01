@@ -14,7 +14,7 @@
                 @endif                   
             @endforeach
           @endif
-        <h3>{{ $propierty->type->name.' En '.$propierty->city->name }}</h3>
+        <h3>{{ $propierty->type->name.' En '.$propierty->city_name }}</h3>
         <p class="tm-date hs-center owner-price">
             Precio de la Propiedad {{ number_format($propierty->real_estate_price, 2)  }} $US
         </p>

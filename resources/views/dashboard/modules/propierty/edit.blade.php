@@ -25,7 +25,7 @@
 <div class="row">
    <div class="col-lg-12" id="scroll">
       <div class="ibox float-e-margins">
-        {{ Form::model($data[0], ['route' => ['propierty.update', $data[0]['id']], 'method' => 'PUT', 'id' => 'propierty-form']) }}
+        {{ Form::model($data[0], ['route' => ['propierty.update', $data[0]['id']], 'method' => 'PUT', 'id' => 'propierty-form-edit']) }}
          <div class="ibox-content">
             <div class="ibox-content">
                @include('dashboard.modules.propierty.partials.model')

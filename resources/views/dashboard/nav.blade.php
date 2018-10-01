@@ -76,9 +76,9 @@
                     <!-- <li>
                         <a href="{{ route('city.index') }}">Ciudades</a>
                     </li> -->
-                    <li>
+                    <!-- <li>
                         <a href="{{ route('area.index') }}">Áreas</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="{{ route('propierty.index') }}">Propiedades</a>
                     </li>

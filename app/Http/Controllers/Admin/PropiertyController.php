@@ -188,7 +188,6 @@ class PropiertyController extends Controller
             'id_user' => id_user(),
             'status' => 1
         ];
-
         // dd($data);
         $propierty = Propierty::create($data);
 

@@ -29,9 +29,10 @@ class PropiertyValidate extends FormRequest
             'property_description' => 'required',
             'id_type_operation' => 'required',
             'id_type_property' => 'required',
-            'id_city' => 'required',
+            'city_name' => 'required',
+            // 'id_city' => 'required',
             'property_address' => 'required',
-            'id_area' => 'required',
+            // 'id_area' => 'required',
         ];
     }
 }

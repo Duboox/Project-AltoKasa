@@ -152,7 +152,7 @@
          </div>
       </div>
       <div class="col-lg-3">
-         <div class="form-group">
+         <!-- <div class="form-group">
             <label>Área (*)</label>
             <select class="form-control" name="id_area">
                <optgroup label="Área Actual">
@@ -169,7 +169,7 @@
                   <strong>{{ $errors->first('id_area') }}</strong>
                </span>
             @endif
-         </div>
+         </div> -->
          <div class="form-group">
             <label>Número</label>
             <input name="number" type="number" class="form-control" {{ placeholder_value($data[0]['number']) }}>

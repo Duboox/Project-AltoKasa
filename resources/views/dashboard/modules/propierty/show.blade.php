@@ -103,12 +103,12 @@
          </div>
       </div>
       <div class="col-lg-3">
-         <div class="form-group">
+         <!-- <div class="form-group">
             <h3>Área (*)</h3>
             <h4 class="show-var-null">
               {{ var_null($data[0]['city']['areas'][0]['name']) }}
             </h4>
-         </div>
+         </div> -->
          <div class="form-group">
             <h3>Número</h3>
             <h4 class="show-var-null">

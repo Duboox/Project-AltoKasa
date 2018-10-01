@@ -250,12 +250,12 @@ var ajax = {
         });
     },
 
-    propierty: function()
-    {
-        $('button#save-propierty').click(function(){
-            $('form#propierty-form').submit();
-        });
-    },
+    // propierty: function()
+    // {
+    //     $('button#save-propierty').click(function(){
+    //         $('form#propierty-form').submit();
+    //     });
+    // },
 
     add_search_owner: function(route)
     {

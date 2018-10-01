@@ -44,11 +44,11 @@
                                 @endforeach
                             </select>
                         </div>
-                         <div class="input-group inline-block">
+                         <!-- <div class="input-group inline-block">
                             <select name="area" class="form-control" id="area">
                                <option value="" id="option">Área</option>
                             </select>
-                        </div>
+                        </div> -->
                         <div class="input-group inline-block">
                             <input type="submit" class="submit form-control btn-info" value="Buscar"> 
                         </div>

@@ -7,7 +7,7 @@
          <div class="ibox-title">
             <h5>Requeridos (*)</h5>
             <div class="ibox-tools">
-               <button type="submit" class="btn btn-primary btn-xs" id="save-propierty" onClick="saveForm()">Guardar Propiedad</button>
+               <button type="submit" class="btn btn-primary btn-xs" id="save-propierty">Guardar Propiedad</button>
             </div>
          </div>
       </div>
@@ -143,7 +143,7 @@
          </div>
       </div>
       <div class="col-lg-3">
-         <div class="form-group">
+         <!-- <div class="form-group">
             <label>Área</label>
             <select class="form-control" name="id_area" id="area">
                <option value="">Selecciona</option>
@@ -156,7 +156,7 @@
                   <strong>{{ $errors->first('id_area') }}</strong>
                </span>
            @endif
-         </div>
+         </div> -->
          <div class="form-group">
             <label>Número</label>
             <input name="number" type="number" class="form-control">

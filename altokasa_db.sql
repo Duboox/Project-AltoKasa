@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2018 a las 01:08:16
--- Versión del servidor: 10.1.33-MariaDB
--- Versión de PHP: 7.2.6
+-- Tiempo de generación: 01-10-2018 a las 05:26:09
+-- Versión del servidor: 10.1.34-MariaDB
+-- Versión de PHP: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `project-inicia`
+-- Base de datos: `altokasa_db`
 --
 
 -- --------------------------------------------------------
@@ -290,12 +290,9 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `id_property`, `img`, `status`, `primary`, `created_at`, `updated_at`) VALUES
-(5, 3, 'VRq892v9lF5vBJFWgZw9_3d86c5f65fcbe005a17507b12b7ca7c4', 1, 1, '2018-07-05 23:27:38', '2018-07-06 00:00:13'),
-(6, 3, 'TmQrvype8DEGpp8uQXhY_4efdd2f969559e8b1c92e99f32ded48e', 1, 0, '2018-07-05 23:27:38', '2018-07-05 23:27:38'),
-(7, 2, 'Akn97lgB00loqac85opJ_6dc01a57fe1fea131d58027c21b5d1e4', 1, 1, '2018-07-05 23:28:20', '2018-07-06 00:00:52'),
-(8, 2, 'XAavmPVursI25AzaelsS_1e50cf88ada8e243325ac793605b6e6c', 1, 0, '2018-07-05 23:28:21', '2018-07-05 23:28:21'),
-(9, 1, 'OQpP4ZuhlPORAkjH2Acx_6dc01a57fe1fea131d58027c21b5d1e4', 1, 0, '2018-07-05 23:28:56', '2018-07-05 23:28:56'),
-(10, 1, 'hHH2ddqQt9LuVBZOrBPh_1d8aae098f56e5152a09b34c19daa95c', 1, 1, '2018-07-05 23:28:56', '2018-07-06 00:01:26');
+(11, 3, '8I6d8upMsjA9oPon4mgG_4efdd2f969559e8b1c92e99f32ded48e', 1, 1, '2018-08-13 05:06:48', '2018-08-13 05:07:20'),
+(12, 2, 'gGBeiIZZ562LhNGGc2JT_d2ed294d2255c953244d8f66eb3eaa3c', 1, 1, '2018-08-13 05:07:50', '2018-08-13 05:08:48'),
+(13, 1, 'ssX1fSsZnUMmtyD15Ue6_1e50cf88ada8e243325ac793605b6e6c', 1, 1, '2018-08-13 05:09:16', '2018-08-13 05:10:26');
 
 -- --------------------------------------------------------
 
@@ -315,10 +312,10 @@ CREATE TABLE `propierties` (
   `id_type_property` int(10) UNSIGNED NOT NULL,
   `type_street` enum('0','1','2','3','4','5','6','7','8','9') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `door` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `id_city` int(10) UNSIGNED NOT NULL,
+  `id_city` int(10) UNSIGNED DEFAULT NULL,
   `city_name` varchar(191) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `property_address` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_area` int(10) UNSIGNED NOT NULL,
+  `id_area` int(10) UNSIGNED DEFAULT NULL,
   `number` int(11) DEFAULT NULL,
   `building` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `anticretico` tinyint(1) DEFAULT NULL,
@@ -336,7 +333,7 @@ CREATE TABLE `propierties` (
   `created_by` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `contact_by` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `important_announcement` text COLLATE utf8mb4_unicode_ci,
-  `c_number` int(11) DEFAULT NULL,
+  `c_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `c_ref` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `folio` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `register_of` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -391,7 +388,8 @@ CREATE TABLE `propierties` (
 INSERT INTO `propierties` (`id`, `id_category`, `title`, `property_description`, `slug`, `id_type_operation`, `auxiliary_zone`, `plant`, `id_type_property`, `type_street`, `door`, `id_city`, `city_name`, `property_address`, `id_area`, `number`, `building`, `anticretico`, `n_simple_rooms`, `n_rooms`, `years_construction`, `n_bathrooms`, `n_parking`, `community`, `n_toilets`, `n_plants`, `suite`, `key_chain`, `priority`, `created_by`, `contact_by`, `important_announcement`, `c_number`, `c_ref`, `folio`, `register_of`, `property_observation`, `real_estate_price`, `owner_price`, `price_open_mode`, `avaluo`, `commission_value`, `calculation`, `in_exclusive_from`, `in_exclusive_to`, `rental_price`, `rental_month`, `honorarium`, `m_included`, `option_to_buy`, `heating_included`, `minimum_period`, `admits_foreigners`, `max_tenants`, `pets_allowed`, `maximum_period`, `students`, `preferences`, `useful_meters`, `kitchen_meter`, `meters_built`, `hall_metro`, `meters_lot`, `front_metro`, `type_floor`, `hot_water`, `kitchen`, `first_name`, `last_name`, `phone`, `cell_phone`, `work_phone`, `description`, `id_user`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Propiedad1 test country', 'Propiedad1 test country', 'propiedad1 test country', 1, NULL, NULL, 1, NULL, NULL, 1, 'Cochabamba, Bolivia', 'Propiedad', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1452, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, '2018-06-08 13:08:01', '2018-06-08 13:08:01'),
 (2, 1, 'test', 'Propiedad', 'propiedad', 1, NULL, NULL, 1, NULL, NULL, 1, 'Camiri, Bolivia', 'Propiedad', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, '2018-06-08 13:08:01', '2018-06-08 13:08:01'),
-(3, 1, 'Propiedad', 'Propiedad', 'propiedad', 1, NULL, NULL, 1, NULL, NULL, 1, 'Cochabamba, Bolivia', 'Propiedad', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, '2018-06-08 13:08:01', '2018-06-08 13:08:01');
+(3, 1, 'Propiedad', 'Propiedad', 'propiedad', 1, NULL, NULL, 1, NULL, NULL, 1, 'Cochabamba, Bolivia', 'Propiedad', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, '2018-06-08 13:08:01', '2018-06-08 13:08:01'),
+(4, 1, '<zx', 'asdasd', 'zx', 1, NULL, NULL, 1, NULL, NULL, NULL, 'Caranavi, Bolivia', 'asdasd', NULL, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, '2018-10-01 03:24:28', '2018-10-01 03:24:28');
 
 -- --------------------------------------------------------
 
@@ -569,7 +567,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `confirmed`, `avatar`, `remember_token`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'alfredo', 'alfredoj322@gmail.com', '04163118777', '$2y$10$owlNqZ24QK5EJRA2/Rq0m.dbflHj/7D2v9hCw.M7WpiJmloCQ1bju', 1, 'default.png', NULL, NULL, '2018-06-08 12:59:13', '2018-06-08 12:59:13');
+(1, 'Joshua', 'test@test.com', '04242336927', '$2y$10$TDBk9nIjqlp6eKtIMBq0HO6NH9VGVARNIPB4D4blUuBdlkPAEY4uq', 1, 'FbTXhlWYB6YwR9uCC3ug_3b5b06b7a2641c8f719c1f9e48a01864', 'bvJQtB7Q53twl5a7honnZznPUSS7nhBcXhV8pGXl7mSizCVXktE05porBSgf', NULL, '2018-06-08 12:59:13', '2018-08-13 04:59:35');
 
 --
 -- Índices para tablas volcadas
@@ -822,13 +820,13 @@ ALTER TABLE `permission_user`
 -- AUTO_INCREMENT de la tabla `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `propierties`
 --
 ALTER TABLE `propierties`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `propierty_tag`
